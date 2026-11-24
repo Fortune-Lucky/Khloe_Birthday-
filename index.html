@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday, Khloe ♡</title>
+
+<style>
+:root {
+  --bg: #100a1c;
+  --pink: #ff83bd;
+  --soft: #ffd6e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top, #39234e, var(--bg) 70%);
+  color: #fff0f7;
+  font-family: Georgia, "Times New Roman", serif;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: var(--soft);
+  text-shadow: 0 0 18px #ff83bd55;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.35rem, 4vw, 2rem);
+}
+
+p {
+  line-height: 1.6;
+}
+
+button {
+  background: var(--pink);
+  color: #35152a;
+  border: 0;
+  border-radius: 28px;
+  padding: 14px 25px;
+  min-height: 48px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  max-width: 100%;
+}
+
+button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+#intro {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#heart {
+  font-size: clamp(75px, 18vw, 110px);
+  animation: pulse 1.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.13); }
+}
+
+.card {
+  width: 100%;
+  background: #ffffff10;
+  border: 1px solid #ffffff25;
+  border-radius: 24px;
+  padding: clamp(16px, 4vw, 28px);
+  margin: 24px auto;
+  backdrop-filter: blur(7px);
+  overflow: hidden;
+}
+
+#countSection {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#countdown {
+  font-size: clamp(3rem, 12vw, 4rem);
+}
+
+.cake {
+  font-size: clamp(55px, 15vw, 75px);
+  animation: pulse 2s infinite;
+}
+
+#letter {
+  white-space: pre-line;
+  line-height: 1.9;
+  font-size: clamp(1rem, 3vw, 1.12rem);
+  overflow-wrap: break-word;
+}
+
+/* PHOTO GALLERY */
+
+#coupleGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+#coupleGallery img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 17px;
+  border: 2px solid #ffd4e9;
+  box-shadow: 0 8px 20px #0005;
+  transition: transform .3s;
+}
+
+#coupleGallery img:hover {
+  transform: scale(1.035);
+}
+
+/* HEART PHOTO COLLAGE */
+
+#heartGallery {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  aspect-ratio: 1;
+  margin: 25px auto;
+  isolation: isolate;
+}
+
+.heartPhoto {
+  position: absolute;
+  width: 19%;
+  height: 19%;
+  object-fit: cover;
+  border-radius: 13px;
+  border: 3px solid #ffd4e9;
+  box-shadow: 0 8px 20px #0005;
+}
+
+/* FLOATING PHOTO BALLOONS */
+
+.balloon {
+  position: fixed;
+  bottom: -180px;
+  width: clamp(65px, 18vw, 105px);
+  height: clamp(90px, 24vw, 140px);
+  border-radius: 55% 55% 50% 50%;
+  background: #ffb7d5;
+  border: 1px solid #ffffff55;
+  box-shadow: inset -12px -12px 20px #7e286055;
+  overflow: hidden;
+  z-index: 3;
+  animation: rise 9s linear forwards;
+  pointer-events: none;
+}
+
+.balloon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.balloon:after {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  height: 38px;
+  border-left: 1px solid #ffffff88;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+/* BACKGROUND STARS */
+
+.star {
+  position: fixed;
+  color: #ffffff75;
+  pointer-events: none;
+  z-index: 0;
+  animation: twinkle 3s alternate infinite;
+}
+
+@keyframes twinkle {
+  to { opacity: .12; }
+}
+
+/* SONG */
+
+.songLink {
+  display: inline-block;
+  color: #ffd6e9;
+  margin-top: 15px;
+  padding: 10px;
+  text-decoration: underline;
+}
+
+#songPlayer {
+  width: 100%;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#songPlayer iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+footer {
+  padding: 30px 15px;
+  color: #d9b8d1;
+  text-align: center;
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 18px;
+  }
+
+  .card {
+    margin: 18px auto;
+  }
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 600px) {
+  section {
+    padding: 32px 14px;
+  }
+
+  #intro {
+    padding: 20px;
+  }
+
+  .heartPhoto {
+    width: 19%;
+    height: 19%;
+    border-width: 2px;
+    border-radius: 8px;
+  }
+
+  #letter {
+    text-align: left;
+  }
+
+  button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .card {
+    border-radius: 18px;
+  }
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 360px) {
+  section {
+    padding: 25px 10px;
+  }
+
+  #coupleGallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* LANDSCAPE PHONES */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  #intro {
+    min-height: 100vh;
+  }
+
+  section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+
+<section id="intro">
+  <div>
+    <div id="heart" onclick="start()">♡</div>
+    <h1>A little surprise for you</h1>
+    <p>Tap the heart to begin</p>
+    <button onclick="start()">Open your surprise ♡</button>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+
+<section id="countSection" style="display:none">
+  <div class="card">
+    <p>Something made with love is coming...</p>
+    <div id="countdown">3</div>
+    <div class="cake">🎂</div>
+  </div>
+</section>
+
+<!-- BIRTHDAY PAGE -->
+
+<section id="main" style="display:none">
+
+  <h1>Happy 15th Birthday, Khloe Summer Roberts! ♡</h1>
+
+  <p>Today is all about celebrating you.</p>
+
+  <!-- BIRTHDAY LETTER -->
+
+  <div class="card">
+    <h2>A message for you ♡</h2>
+
+    <div id="letter">
+Happy 15th Birthday, my love. Don't ask me how long this shit took me, but since I love you so much, it really doesn't matter. I hope that today you have a lovely day filled with joy and happiness, and remember that I will always be proud and so in love with you
+    </div>
+  </div>
+
+  <!-- PHOTOS OF US -->
+
+  <div class="card">
+    <h2>Our Little Collection ♡</h2>
+    <p>A collection of memories, moments and us.</p>
+    <div id="coupleGallery"></div>
+  </div>
+
+  <!-- HEART COLLAGE -->
+
+  <div class="card">
+    <h2>A heart full of memories ♡</h2>
+    <div id="heartGallery"></div>
+  </div>
+
+  <!-- SONG -->
+
+  <div class="card">
+    <h2>Our Song ♡</h2>
+    <p>Highschool Sweethearts</p>
+
+    <div id="songPlayer">
+      <p>Our song is waiting for you ♡</p>
+    </div>
+
+    <a
+      class="songLink"
+      href="https://open.spotify.com/search/highschool%20sweethearts"
+      target="_blank"
+      rel="noopener">
+      Find our song on Spotify ♡
+    </a>
+  </div>
+
+  <!-- REPLAY -->
+
+  <button onclick="location.reload()">
+    Replay the surprise ♡
+  </button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  Made with love ♡
+</footer>
+
+<script>
+
+/* YOUR PHOTOS */
+
+// BIRTHDAY PHOTOS: photo1 to photo11
+
+const photos = [
+  "photos/photo1.jpg",
+  "photos/photo2.jpg",
+  "photos/photo3.jpg",
+  "photos/photo4.jpg",
+  "photos/photo5.jpg",
+  "photos/photo6.jpg",
+  "photos/photo7.jpg",
+  "photos/photo8.jpg",
+  "photos/photo9.jpg",
+  "photos/photo10.jpg",
+  "photos/photo11.jpg"
+];
+
+// PHOTOS OF US: photo12 to photo20
+
+const couplePhotos = [
+  "photos/photo12.jpg",
+  "photos/photo13.jpg",
+  "photos/photo14.jpg",
+  "photos/photo15.jpg",
+  "photos/photo16.jpg",
+  "photos/photo17.jpg",
+  "photos/photo18.jpg",
+  "photos/photo19.jpg",
+  "photos/photo20.jpg"
+];
+
+
+/* SPOTIFY PLAYER */
+
+// Add your exact Spotify track link here if you have it.
+
+const spotifyTrackUrl = "";
+
+function loadSong() {
+
+  const player = document.getElementById("songPlayer");
+
+  const match = spotifyTrackUrl.match(
+    /open\.spotify\.com\/track\/([a-zA-Z0-9]+)/
+  );
+
+  if (!match) {
+    player.innerHTML =
+      "<p>Press the Spotify link below to find our song ♡</p>";
+    return;
+  }
+
+  const iframe = document.createElement("iframe");
+
+  iframe.src =
+    "https://open.spotify.com/embed/track/" +
+    match[1] + "?utm_source=generator&theme=0";
+
+  iframe.width = "100%";
+  iframe.height = "152";
+  iframe.style.border = "0";
+
+  iframe.allow =
+    "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+
+  iframe.setAttribute("loading", "lazy");
+  iframe.setAttribute("title", "Our song on Spotify");
+
+  player.innerHTML = "";
+  player.appendChild(iframe);
+}
+
+loadSong();
+
+
+/* BUILD PHOTO GALLERY */
+
+function buildGallery() {
+
+  const gallery = document.getElementById("coupleGallery");
+  const heart = document.getElementById("heartGallery");
+
+  gallery.innerHTML = "";
+  heart.innerHTML = "";
+
+  // DISPLAY PHOTOS OF US
+
+  couplePhotos.forEach((src, i) => {
+
+    const img = document.createElement("img");
+
+    img.src = src;
+    img.alt = "A memory of us " + (i + 1);
+
+    img.onerror = function() {
+      img.remove();
+    };
+
+    gallery.appendChild(img);
+  });
+
+
+  // PHOTOS ARRANGED IN A HEART SHAPE
+
+  const positions = [
+    [40, 2],
+    [17, 17],
+    [63, 17],
+    [3, 36],
+    [27, 36],
+    [51, 36],
+    [75, 36],
+    [16, 55],
+    [40, 55],
+    [64, 55],
+    [40, 74]
+  ];
+
+  photos.forEach((src, i) => {
+
+    const img = document.createElement("img");
+
+    img.src = src;
+    img.alt = "Birthday memory " + (i + 1);
+
+    img.className = "heartPhoto";
+
+    img.style.left = positions[i][0] + "%";
+    img.style.top = positions[i][1] + "%";
+
+    img.onerror = function() {
+      img.remove();
+    };
+
+    heart.appendChild(img);
+  });
+}
+
+
+/* COUNTDOWN */
+
+let hasStarted = false;
+
+function start() {
+
+  if (hasStarted) return;
+  hasStarted = true;
+
+  document.getElementById("intro").style.display = "none";
+
+  const sec = document.getElementById("countSection");
+
+  sec.style.display = "flex";
+
+  let n = 3;
+
+  const el = document.getElementById("countdown");
+
+  el.textContent = n;
+
+  const timer = setInterval(() => {
+
+    n--;
+
+    if (n > 0) {
+
+      el.textContent = n;
+
+    } else {
+
+      clearInterval(timer);
+
+      el.textContent = "♡";
+
+      setTimeout(() => {
+
+        sec.style.display = "none";
+
+        document.getElementById("main").style.display = "block";
+
+        buildGallery();
+
+        floatBalloons();
+
+      }, 750);
+
+    }
+
+  }, 1000);
+
+}
+
+
+/* FLOATING PHOTO BALLOONS */
+
+function floatBalloons() {
+
+  if (photos.length === 0) return;
+
+  let count = 0;
+
+  const timer = setInterval(() => {
+
+    const b = document.createElement("div");
+
+    b.className = "balloon";
+
+    const img = document.createElement("img");
+
+    img.src = photos[count % photos.length];
+
+    img.onerror = function() {
+      b.remove();
+    };
+
+    b.append(img);
+
+    b.style.left = Math.random() * 85 + "vw";
+
+    b.style.animationDuration =
+      (7 + Math.random() * 4) + "s";
+
+    document.body.append(b);
+
+    setTimeout(() => b.remove(), 11000);
+
+    count++;
+
+    if (count >= 18) {
+      clearInterval(timer);
+    }
+
+  }, 450);
+
+}
+
+
+/* BACKGROUND STARS */
+
+for (let i = 0; i < 45; i++) {
+
+  const s = document.createElement("div");
+
+  s.className = "star";
+
+  s.textContent = "✦";
+
+  s.style.left = Math.random() * 100 + "vw";
+
+  s.style.top = Math.random() * 100 + "vh";
+
+  s.style.fontSize =
+    (8 + Math.random() * 15) + "px";
+
+  s.style.animationDelay =
+    Math.random() * 3 + "s";
+
+  document.body.append(s);
+
+}
+
+</script>
+</body>
+</html>
